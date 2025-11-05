@@ -1,0 +1,221 @@
+ /* ===================================
+    TaskFlow - Styles
+    Sistema de Gestão de Projetos
+    =================================== */
+ 
+/* --- Variáveis e Reset --- */
+ * {
+     font-family: 'Inter', sans-serif;
+ }
+ 
+ :root {
+     --primary: #5D5CDE;
+     --primary-hover: #4a49c5;
+ }
+ 
+ /* --- Animações --- */
+ @keyframes fadeIn {
+     from { opacity: 0; }
+     to { opacity: 1; }
+ }
+ 
+ @keyframes slideIn {
+     from {
+         transform: translateY(-20px);
+         opacity: 0;
+     }
+     to {
+         transform: translateY(0);
+         opacity: 1;
+     }
+ }
+ 
+ /* --- Componentes Globais --- */
+ .btn-primary {
+     background-color: var(--primary);
+     color: white;
+     transition: background-color 0.2s;
+ }
+ 
+ .btn-primary:hover {
+     background-color: var(--primary-hover);
+ }
+ 
+ .modal-overlay {
+     animation: fadeIn 0.2s ease-in-out;
+ }
+ 
+ .slide-in {
+     animation: slideIn 0.3s ease-out;
+ }
+ 
+ /* --- Drag and Drop --- */
+ .dragging {
+    opacity: 0.5;
+ }
+ 
+ .drag-over {
+     background-color: rgba(93, 92, 222, 0.1);
+ }
+ 
+ .task-card {
+     transition: margin 0.2s ease;
+ }
+ 
+ .drag-placeholder {
+     border: 2px dashed #5D5CDE;
+     background-color: rgba(93, 92, 222, 0.05);
+     height: 60px;
+     border-radius: 8px;
+     margin-bottom: 8px;
+ }
+ 
+ .card-hover {
+     transition: transform 0.2s, box-shadow 0.2s;
+ }
+ 
+ .card-hover:hover {
+     transform: translateY(-2px);
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+ }
+ 
+ /* --- Scrollbar --- */
+ .scrollbar-hide::-webkit-scrollbar {
+     display: none;
+ }
+ 
+ .scrollbar-hide {
+     -ms-overflow-style: none;
+     scrollbar-width: none;
+ }
+ 
+ /* --- Listas --- */
+ .list-container {
+     min-width: 280px;
+     max-width: 280px;
+ }
+ 
+ .list-header {
+     border-radius: 8px 8px 0 0;
+     padding: 12px;
+     margin: -16px -16px 12px -16px;
+ }
+ 
+ /* --- Cores --- */
+ .color-option {
+     width: 36px;
+     height: 36px;
+     border-radius: 8px;
+     cursor: pointer;
+     transition: transform 0.2s, box-shadow 0.2s;
+     border: 3px solid transparent;
+ }
+ 
+ .color-option:hover {
+     transform: scale(1.1);
+ }
+ 
+ .color-option.selected {
+     border-color: #5D5CDE;
+     box-shadow: 0 0 0 2px rgba(93, 92, 222, 0.2);
+ }
+ 
+ /* --- Tabs de Quadros --- */
+ .board-tab {
+     transition: background-color 0.2s, color 0.2s;
+     white-space: nowrap;
+ }
+ 
+ .board-tab.active {
+     background-color: var(--primary);
+     color: white;
+  }
+  
+ /* --- Context Menu --- */
+ .context-menu {
+     position: absolute;
+     background: white;
+     border-radius: 8px;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+     padding: 8px 0;
+     min-width: 200px;
+     z-index: 1000;
+     display: none;
+ }
+ 
+ .context-menu.show {
+     display: block;
+ }
+ 
+ .context-menu-item {
+     padding: 10px 16px;
+     cursor: pointer;
+     transition: background-color 0.2s;
+     display: flex;
+     align-items: center;
+     gap: 8px;
+ }
+ 
+ .context-menu-item:hover {
+     background-color: #f3f4f6;
+ }
+ 
+ .context-menu-item.danger:hover {
+     background-color: #fee2e2;
+     color: #dc2626;
+ }
+ 
+ .context-menu-separator {
+     height: 1px;
+     background-color: #e5e7eb;
+     margin: 4px 0;
+ }
+ 
+ /* Dark mode para context menu */
+ .dark .context-menu {
+     background: #1f2937;
+     border: 1px solid #374151;
+ }
+ 
+ .dark .context-menu-item:hover {
+     background-color: #374151;
+ }
+ 
+ .dark .context-menu-item.danger:hover {
+     background-color: #7f1d1d;
+     color: #fca5a5;
+ }
+ 
+ .dark .context-menu-separator {
+     background-color: #4b5563;
+ }
+ 
+ /* --- Responsivo --- */
+ @media (max-width: 640px) {
+     .list-container {
+         min-width: 260px;
+         max-width: 260px;
+     }
+ }
+ 
+ /* --- Cores das Listas --- */
+ .list-color-red { background-color: #FEE2E2; }
+ .list-color-orange { background-color: #FFEDD5; }
+ .list-color-yellow { background-color: #FEF9C3; }
+ .list-color-green { background-color: #D1FAE5; }
+ .list-color-blue { background-color: #DBEAFE; }
+ .list-color-indigo { background-color: #E0E7FF; }
+ .list-color-purple { background-color: #F3E8FF; }
+ .list-color-pink { background-color: #FCE7F3; }
+ .list-color-gray { background-color: #F3F4F6; }
+ 
+ /* Dark mode para cores das listas */
+ .dark .list-color-red { background-color: #7f1d1d; }
+ .dark .list-color-orange { background-color: #7c2d12; }
+ .dark .list-color-yellow { background-color: #713f12; }
+ .dark .list-color-green { background-color: #14532d; }
+ .dark .list-color-blue { background-color: #1e3a8a; }
+ .dark .list-color-indigo { background-color: #312e81; }
+ .dark .list-color-purple { background-color: #581c87; }
+ .dark .list-color-pink { background-color: #831843; }
+ .dark .list-color-gray { background-color: #374151; }
