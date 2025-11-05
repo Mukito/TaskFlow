@@ -1,6 +1,10 @@
 # TaskFlow
 Aplicativo para Gerenciar projetos tipo Trello
 
+<img width="1902" height="934" alt="image" src="https://github.com/user-attachments/assets/dadd2ba0-98da-4880-8474-7dfa17bb9abc" />
+
+<img width="1913" height="955" alt="image" src="https://github.com/user-attachments/assets/ba0f59ef-8cdf-4b7e-88ad-a83aca296a3d" />
+
 
 # 📋 TaskFlow - Sistema de Gestão de Projetos
  
